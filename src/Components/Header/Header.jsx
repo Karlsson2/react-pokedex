@@ -1,3 +1,4 @@
+import RandomPokemon from "../RandomPokemon/RandomPokemon";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -6,6 +7,7 @@ export default function Header() {
       <a href="/">
         <h1>Pokemon</h1>
       </a>
+      <RandomPokemon />
     </div>
   );
 }

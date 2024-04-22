@@ -1,7 +1,7 @@
 import styles from "./List.module.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PokemonLikeButton from "./pokemonProfile/pokemonLikeButton";
+import PokemonLikeButton from "../pokemonProfile/pokemonLikeButton";
 
 export default function List() {
   const [pokeData, setPokeData] = useState([]);

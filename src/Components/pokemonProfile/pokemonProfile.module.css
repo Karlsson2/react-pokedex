@@ -39,7 +39,9 @@
   text-align: end;
 }
 .types {
+  margin-top: 8px;
   display: flex;
+  gap: 8px;
 }
 .typesContainer {
   border-radius: 20px;

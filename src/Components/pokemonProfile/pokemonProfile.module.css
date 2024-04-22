@@ -1,6 +1,7 @@
 .pokemonCard {
+  color: var(--font-color);
   margin: 0 auto;
-  max-width: calc(100% -64px);
+  max-width: 350px;
   width: calc(100% - 64px);
   display: flex;
   flex-direction: column;
@@ -37,8 +38,10 @@
 .textContainer p {
   margin: 0px;
   text-align: end;
+  margin-bottom: -10px;
 }
 .types {
+  flex-wrap: wrap;
   margin-top: 8px;
   display: flex;
   gap: 8px;
@@ -52,6 +55,12 @@
   border-radius: 20px;
   padding: 24px 48px;
   background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+  display: flex;
+  flex-direction: column;
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
 }
 h3 {
   margin: 0;
@@ -59,5 +68,47 @@ h3 {
 .type {
   padding: 8px 16px;
   border-radius: 8px;
-  color: "#ffffff" !important;
+  font-weight: bold;
+  color: #ffffff;
+}
+.likeButton {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 24px;
+}
+.likedHeart {
+  color: rgb(185, 35, 35);
+}
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 768px) {
+  .pokemonCard {
+    max-width: calc(400px);
+    width: calc(60% - 64px);
+  }
+  .topCard img {
+    width: 200px;
+  }
+  .topCard {
+    padding: 32px 32px;
+  }
+  .textContainer h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Media query for screens larger than 1024px */
+@media screen and (min-width: 1024px) {
+  .pokemonCard {
+    max-width: 700px;
+    width: calc(60% - 64px);
+  }
+  .topCard img {
+    width: 300px;
+  }
+  .topCard {
+    padding: 32px 32px;
+  }
+  .textContainer h2 {
+    font-size: 3rem;
+  }
 }

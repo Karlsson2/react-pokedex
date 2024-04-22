@@ -1,6 +1,7 @@
 import styles from "./pokemonProfile.module.css";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import PokemonLikeButton from "./pokemonLikeButton";
 
 function PokemonProfile() {
   const { pokemonName } = useParams();
@@ -43,12 +44,14 @@ function PokemonProfile() {
                 </audio>
               </div>
             </div>
+
             <div className={styles.topCard}>
               <img
                 src={pokemon.sprites.other["official-artwork"].front_default}
                 alt={`Image of ${pokemonName}`}
               />
               <div className={styles.textContainer}>
+                <PokemonLikeButton pokemonName={pokemonName} />
                 <p>No. {formatPokemonOrder(pokemon.id)}</p>
 
                 <h2
@@ -68,7 +71,7 @@ function PokemonProfile() {
                       type.type.name + "-background"
                     }`}
                   >
-                    {type.type.name}
+                    {capitalizeFirstLetter(type.type.name)}
                   </div>
                 ))}
               </div>
@@ -76,8 +79,11 @@ function PokemonProfile() {
             <div className={styles.statsContainer}>
               <h3>Stats:</h3>
               {pokemon.stats.map((stat, index) => (
-                <div key={index} className="">
-                  {stat.stat.name} + {stat.base_stat}
+                <div key={index} className={styles.stat}>
+                  <div className="stat-name">
+                    {capitalizeFirstLetter(stat.stat.name)}
+                  </div>
+                  <div className="stat">{stat.base_stat}</div>
                 </div>
               ))}
             </div>

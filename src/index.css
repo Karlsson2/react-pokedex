@@ -75,3 +75,75 @@
 .water {
   color: #73b5d9; /* Water Light */
 }
+
+.dragon-background {
+  background: #8a80ff; /* Dragon Light */
+}
+
+.bug-background {
+  background: #a8c057; /* Bug Light */
+}
+
+.dark-background {
+  background: #7a7880; /* Dark Light */
+}
+
+.electric-background {
+  background: #ebd15e; /* Electric Light */
+}
+
+.fairy-background {
+  background: #f198cd; /* Fairy Light */
+}
+
+.fighting-background {
+  background: #da7b8f; /* Fighting Light */
+}
+
+.fire-background {
+  background: #eca15e; /* Fire Light */
+}
+
+.flying-background {
+  background: #6b88c4; /* Flying Light */
+}
+
+.ghost-background {
+  background: #8e79b3; /* Ghost Light */
+}
+
+.grass-background {
+  background: #77bd7e; /* Grass Light */
+}
+
+.ground-background {
+  background: #c98a54; /* Ground Light */
+}
+
+.ice-background {
+  background: #9fd8d1; /* Ice Light */
+}
+
+.normal-background {
+  background: #a0a496; /* Normal Light */
+}
+
+.poison-background {
+  background: #7d559e; /* Poison Light */
+}
+
+.psychic-background {
+  background: #eda18d; /* Psychic Light */
+}
+
+.rock-background {
+  background: #c0b6b1; /* Rock Light */
+}
+
+.steel-background {
+  background: #b9becb; /* Steel Light */
+}
+
+.water-background {
+  background: #73b5d9; /* Water Light */
+}

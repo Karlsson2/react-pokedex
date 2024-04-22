@@ -3,40 +3,75 @@
   line-height: 1.5;
   font-weight: 400;
   --font-color: "#5C5858";
-  --normal-dark: "#7C8A99";
-  --normal-light: "#A0A496";
-  --fire-dark: "#EF8E49";
-  --fire-light: "#ECA15E";
-  --fighting-dark: "#D05E7D";
-  --fighting-light: "#DA7B8F";
-  --water-dark: "#509BD2";
-  --water-light: "#73B5D9";
-  --flying-dark: "#5370B3";
-  --flying-light: "#6B88C4";
-  --grass-dark: "#64B771";
-  --grass-light: "#77BD7E";
-  --poison-dark: "#7D559E";
-  --poison-light: "#7D559E";
-  --electric-dark: "#DDC049";
-  --electric-light: "#EBD15E";
-  --ground-dark: "#CE7A4E";
-  --ground-light: "#C98A54";
-  --psychic-dark: "#E87A79";
-  --psychic-light: "#EDA18D";
-  --rock-dark: "#A89F9A";
-  --rock-light: "#C0B6B1";
-  --ice-dark: "#82C9C2";
-  --ice-light: "#9FD8D1";
-  --bug-dark: "#8CB440";
-  --bug-light: "#A8C057";
-  --dragon-dark: "#7262F6";
-  --dragon-light: "#8A80FF";
-  --ghost-dark: "#705897";
-  --ghost-light: "#8E79B3";
-  --dark-dark: "#5C5A60";
-  --dark-light: "#7A7880";
-  --steel-dark: "#A0A5B3";
-  --steel-light: "#B9BECB";
-  --fairy-dark: "#E47DB4";
-  --fairy-light: "#F198CD";
+}
+.dragon {
+  color: #8a80ff; /* Dragon Light */
+}
+
+.bug {
+  color: #a8c057; /* Bug Light */
+}
+
+.dark {
+  color: #7a7880; /* Dark Light */
+}
+
+.electric {
+  color: #ebd15e; /* Electric Light */
+}
+
+.fairy {
+  color: #f198cd; /* Fairy Light */
+}
+
+.fighting {
+  color: #da7b8f; /* Fighting Light */
+}
+
+.fire {
+  color: #eca15e; /* Fire Light */
+}
+
+.flying {
+  color: #6b88c4; /* Flying Light */
+}
+
+.ghost {
+  color: #8e79b3; /* Ghost Light */
+}
+
+.grass {
+  color: #77bd7e; /* Grass Light */
+}
+
+.ground {
+  color: #c98a54; /* Ground Light */
+}
+
+.ice {
+  color: #9fd8d1; /* Ice Light */
+}
+
+.normal {
+  color: #a0a496; /* Normal Light */
+}
+
+.poison {
+  color: #7d559e; /* Poison Light */
+}
+
+.psychic {
+  color: #eda18d; /* Psychic Light */
+}
+
+.rock {
+  color: #c0b6b1; /* Rock Light */
+}
+
+.steel {
+  color: #b9becb; /* Steel Light */
+}
+
+.water {
+  color: #73b5d9; /* Water Light */
 }

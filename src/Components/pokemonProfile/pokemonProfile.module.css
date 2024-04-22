@@ -1,0 +1,56 @@
+.pokemonCard {
+  margin: 0 auto;
+  max-width: calc(100% -64px);
+  width: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.audioContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.topCard {
+  margin-top: 16px;
+  display: flex;
+  position: relative;
+  background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+  border-radius: 20px;
+  padding: 16px 32px;
+  justify-content: flex-end;
+}
+.topCard img {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  left: 0;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textContainer h2 {
+  margin-top: 0px;
+  font-size: 1.5rem;
+}
+.textContainer p {
+  margin: 0px;
+  text-align: end;
+}
+.types {
+  display: flex;
+}
+.typesContainer {
+  border-radius: 20px;
+  padding: 24px 48px;
+  background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+}
+.statsContainer {
+  border-radius: 20px;
+  padding: 24px 48px;
+  background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+}
+h3 {
+  margin: 0;
+}

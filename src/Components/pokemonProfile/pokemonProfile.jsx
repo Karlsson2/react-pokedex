@@ -62,15 +62,21 @@ function PokemonProfile() {
               <h3>Types:</h3>
               <div className={styles.types}>
                 {pokemon.types.map((type, index) => (
-                  <div class={type.type.name}>{type.type.name}</div>
+                  <div
+                    key={index}
+                    className={`${styles.type} ${
+                      type.type.name + "-background"
+                    }`}
+                  >
+                    {type.type.name}
+                  </div>
                 ))}
               </div>
             </div>
             <div className={styles.statsContainer}>
               <h3>Stats:</h3>
-
               {pokemon.stats.map((stat, index) => (
-                <div>
+                <div key={index} className="">
                   {stat.stat.name} + {stat.base_stat}
                 </div>
               ))}

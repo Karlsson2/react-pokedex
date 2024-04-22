@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function List() {
   const [pokeData, setPokeData] = useState([]);
-  const APIurl = "https://pokeapi.co/api/v2/pokemon?limit=15";
+  const APIurl = "https://pokeapi.co/api/v2/pokemon?limit=151";
 
   useEffect(() => {
     const fetchPokeData = async () => {
@@ -31,7 +31,7 @@ export default function List() {
 
     fetchPokeData();
   }, []);
-  console.log(pokeData);
+
   return (
     <div className={styles.container}>
       {pokeData &&

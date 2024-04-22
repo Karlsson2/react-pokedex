@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function PokemonProfile() {
+function Pokemon() {
   const { pokemonName } = useParams();
   const [pokemon, setPokemon] = useState(null);
 
@@ -75,4 +75,4 @@ function PokemonProfile() {
   );
 }
 
-export default PokemonProfile;
+export default Pokemon;

@@ -1,3 +1,4 @@
+import styles from "./pokemonProfile.module.css";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -34,33 +35,39 @@ function PokemonProfile() {
     <>
       {pokemon && ( // Render only when pokemon is not null
         <>
-          <div className="pokemon-card">
-            <div className="audio-container">
+          <div className={styles.pokemonCard}>
+            <div className={styles.audioContainer}>
               <div className="audio">
                 <audio controls>
                   <source src={pokemon.cries.legacy} type="audio/ogg" />
                 </audio>
               </div>
             </div>
-            <div className="top-card-pokemon">
+            <div className={styles.topCard}>
               <img
                 src={pokemon.sprites.other["official-artwork"].front_default}
                 alt={`Image of ${pokemonName}`}
               />
-              <div className="textContainer">
-                <h2>{capitalizeFirstLetter(pokemonName)}</h2>
+              <div className={styles.textContainer}>
                 <p>No. {formatPokemonOrder(pokemon.id)}</p>
+
+                <h2
+                  className={`${styles.textColor} ${pokemon.types[0].type.name}`}
+                >
+                  {capitalizeFirstLetter(pokemonName)}
+                </h2>
               </div>
             </div>
-            <div className="Types">
-              <p>Types:</p>
-
-              {pokemon.types.map((type, index) => (
-                <div>{type.type.name}</div>
-              ))}
+            <div className={styles.typesContainer}>
+              <h3>Types:</h3>
+              <div className={styles.types}>
+                {pokemon.types.map((type, index) => (
+                  <div class={type.type.name}>{type.type.name}</div>
+                ))}
+              </div>
             </div>
-            <div className="stats">
-              <p>Stats:</p>
+            <div className={styles.statsContainer}>
+              <h3>Stats:</h3>
 
               {pokemon.stats.map((stat, index) => (
                 <div>

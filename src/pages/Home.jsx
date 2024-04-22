@@ -1,4 +1,4 @@
-import List from "../Components/List";
+import List from "../Components/List/List";
 import ToTop from "../Components/ToTop/ToTop";
 
 function Home() {

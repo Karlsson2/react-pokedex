@@ -32,6 +32,10 @@ export default function List() {
     fetchPokeData();
   }, []);
 
+  function formatPokemonOrder(order) {
+    return order < 10 ? `00${order}` : order < 100 ? `0${order}` : `${order}`;
+  }
+
   return (
     <div className={styles.container}>
       {pokeData &&
@@ -39,6 +43,7 @@ export default function List() {
           <div className={styles.card} key={index}>
             <Link to={`/${pokemon.name}`}>
               <h2>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`}</h2>
+              <p>No. {formatPokemonOrder(pokemon.id)}</p>
               <img className={styles.avatar} src={pokemon.sprites.other["official-artwork"].front_default} />
             </Link>
           </div>

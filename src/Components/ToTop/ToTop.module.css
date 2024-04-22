@@ -10,6 +10,7 @@
   height: 4rem;
   border: none;
   border-radius: 50%;
+  background-color: rgb(35, 33, 33);
   cursor: pointer;
   z-index: 999;
 }

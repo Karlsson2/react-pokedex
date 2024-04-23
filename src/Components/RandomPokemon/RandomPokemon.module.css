@@ -1,6 +1,17 @@
 .button {
-  padding: 0.5rem;
+  padding: 0.6rem;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--font-color);
+  background-color: #5ad9be;
+  box-shadow: 2px 2px 5px rgb(106, 103, 103);
+}
+
+.button:hover {
+  background-color: #49b9a1;
 }

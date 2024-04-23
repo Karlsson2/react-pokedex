@@ -33,21 +33,25 @@ export default function List() {
     fetchPokeData();
   }, []);
 
+  function formatPokemonOrder(order) {
+    return order < 10 ? `00${order}` : order < 100 ? `0${order}` : `${order}`;
+  }
+
   return (
     <div className={styles.container}>
       {pokeData &&
         pokeData.map((pokemon, index) => (
           <div className={styles.card} key={index}>
             <Link to={`/${pokemon.name}`}>
-              <PokemonLikeButton pokemonName={pokemon.name} />
-
-              <h2>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
-                1
-              )}`}</h2>
-              <img
-                className={styles.avatar}
-                src={pokemon.sprites.other["official-artwork"].front_default}
-              />
+<PokemonLikeButton pokemonName={pokemon.name} />
+              <div className={styles.textbox}>
+                <h2
+                  className={`${styles.textColor} ${pokemon.types[0].type.name}`}>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
+                  1
+                )}`}</h2>
+                <p>No. {formatPokemonOrder(pokemon.id)}</p>
+              </div>
+              <img className={styles.avatar} src={pokemon.sprites.other["official-artwork"].front_default} />
             </Link>
           </div>
         ))}

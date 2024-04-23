@@ -12,22 +12,47 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 2rem;
   gap: 1rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
-  text-align: center;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 25%;
+  width: 100%;
   padding: 1rem;
+  border-radius: 20px;
   cursor: pointer;
+  background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+}
+
+.textbox {
+  text-align: end;
+  margin-left: 10rem;
+  width: fit-content;
 }
 
 .avatar {
   max-width: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    flex-basis: 45%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    flex-basis: 100%;
+  }
 }

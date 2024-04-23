@@ -2,6 +2,7 @@ import styles from "./List.module.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PokemonLikeButton from "../pokemonProfile/pokemonLikeButton";
+import SpinnerWheel from "../Spinner/Spinner";
 
 export default function List() {
   const [pokeData, setPokeData] = useState([]);
@@ -33,6 +34,10 @@ export default function List() {
     fetchPokeData();
   }, []);
 
+  if (pokeData.length === 0) {
+    return <SpinnerWheel />;
+  }
+
   function formatPokemonOrder(order) {
     return order < 10 ? `00${order}` : order < 100 ? `0${order}` : `${order}`;
   }
@@ -47,11 +52,15 @@ export default function List() {
                 <PokemonLikeButton pokemonName={pokemon.name} />
                 <p>No. {formatPokemonOrder(pokemon.id)}</p>
                 <h2
-                  className={`${styles.textColor} ${pokemon.types[0].type.name}`}>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
+                  className={`${styles.textColor} ${pokemon.types[0].type.name}`}
+                >{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
                   1
                 )}`}</h2>
               </div>
-              <img className={styles.avatar} src={pokemon.sprites.other["official-artwork"].front_default} />
+              <img
+                className={styles.avatar}
+                src={pokemon.sprites.other["official-artwork"].front_default}
+              />
             </Link>
           </div>
         ))}

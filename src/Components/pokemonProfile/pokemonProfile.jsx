@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import PokemonLikeButton from "./pokemonLikeButton";
 import { Navigate } from "react-router-dom";
 import SpinnerWheel from "../Spinner/Spinner";
+import pikachu from "../../assets/images/pikachu.gif";
 
 function PokemonProfile() {
   const { pokemonName } = useParams();
@@ -33,7 +34,7 @@ function PokemonProfile() {
   if (error) {
     return (
       <div className={styles.errorContainer}>
-        <img src="/src/assets/images/pikachu.gif" alt="pikachu-gif" />
+        <img src={pikachu} alt="pikachu-gif" />
         <p>The pokemon {pokemonName} does not exist!</p>
       </div>
     );

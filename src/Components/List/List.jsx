@@ -1,6 +1,7 @@
 import styles from "./List.module.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import PokemonLikeButton from "../pokemonProfile/pokemonLikeButton";
 
 export default function List() {
   const [pokeData, setPokeData] = useState([]);
@@ -42,6 +43,7 @@ export default function List() {
         pokeData.map((pokemon, index) => (
           <div className={styles.card} key={index}>
             <Link to={`/${pokemon.name}`}>
+<PokemonLikeButton pokemonName={pokemon.name} />
               <div className={styles.textbox}>
                 <h2
                   className={`${styles.textColor} ${pokemon.types[0].type.name}`}>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(

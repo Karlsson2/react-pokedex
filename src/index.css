@@ -1,8 +1,9 @@
 :root {
+  --font-color: #5c5858;
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --font-color: "#5C5858";
+  color: var(--font-color);
 }
 .dragon {
   color: #8a80ff; /* Dragon Light */

@@ -43,13 +43,13 @@ export default function List() {
         pokeData.map((pokemon, index) => (
           <div className={styles.card} key={index}>
             <Link to={`/${pokemon.name}`}>
-<PokemonLikeButton pokemonName={pokemon.name} />
               <div className={styles.textbox}>
+                <PokemonLikeButton pokemonName={pokemon.name} />
+                <p>No. {formatPokemonOrder(pokemon.id)}</p>
                 <h2
                   className={`${styles.textColor} ${pokemon.types[0].type.name}`}>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
                   1
                 )}`}</h2>
-                <p>No. {formatPokemonOrder(pokemon.id)}</p>
               </div>
               <img className={styles.avatar} src={pokemon.sprites.other["official-artwork"].front_default} />
             </Link>

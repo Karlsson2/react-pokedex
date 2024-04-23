@@ -6,11 +6,16 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding: 32px 0px;
 }
 .audioContainer {
+  max-width: 100%;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+audio {
+  max-width: 100%;
 }
 .topCard {
   margin-top: 16px;
@@ -52,6 +57,8 @@
   background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
 }
 .statsContainer {
+  margin-top: 8px;
+  gap: 8px;
   border-radius: 20px;
   padding: 24px 48px;
   background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
@@ -77,8 +84,28 @@ h3 {
   font-size: 24px;
 }
 .likedHeart {
-  color: rgb(185, 35, 35);
+  color: hsl(0, 68%, 53%);
 }
+
+.statNumber {
+  font-weight: 600;
+}
+
+.errorContainer {
+  padding-top: 48px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorContainer img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+}
+
 /* Media query for screens larger than 768px */
 @media screen and (min-width: 768px) {
   .pokemonCard {

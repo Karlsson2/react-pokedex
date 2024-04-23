@@ -2,16 +2,23 @@ import styles from "./pokemonProfile.module.css";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PokemonLikeButton from "./pokemonLikeButton";
+import { Navigate } from "react-router-dom";
+import SpinnerWheel from "../Spinner/Spinner";
 
 function PokemonProfile() {
   const { pokemonName } = useParams();
-  const [pokemon, setPokemon] = useState(null);
+  const [pokemon, setPokemon] = useState(undefined);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonName)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          if (response.status === 404) {
+            throw new Error("Pokemon not found");
+          } else {
+            throw new Error("Network response was not ok");
+          }
         }
         return response.json();
       })
@@ -19,11 +26,26 @@ function PokemonProfile() {
         setPokemon(data);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
-        // Handle error, e.g., set an error state to display a message to the user
+        setError(error.message);
       });
   }, [pokemonName]);
 
+  if (error) {
+    return (
+      <div className={styles.errorContainer}>
+        <img src="/src/assets/images/pikachu.gif" alt="pikachu-gif" />
+        <p>The pokemon {pokemonName} does not exist!</p>
+      </div>
+    );
+  }
+
+  if (pokemon === undefined) {
+    return <SpinnerWheel />;
+  }
+
+  if (!pokemon) {
+    return <Navigate to={{ pathname: "error/404" }} />;
+  }
   function formatPokemonOrder(order) {
     return order < 10 ? `00${order}` : order < 100 ? `0${order}` : `${order}`;
   }
@@ -34,6 +56,7 @@ function PokemonProfile() {
 
   return (
     <>
+      {pokemon === null && <Navigate to="/404" />}
       {pokemon && ( // Render only when pokemon is not null
         <>
           <div className={styles.pokemonCard}>
@@ -48,16 +71,16 @@ function PokemonProfile() {
             <div className={styles.topCard}>
               <img
                 src={pokemon.sprites.other["official-artwork"].front_default}
-                alt={`Image of ${pokemonName}`}
+                alt={`Image of ${pokemon.name}`}
               />
               <div className={styles.textContainer}>
-                <PokemonLikeButton pokemonName={pokemonName} />
+                <PokemonLikeButton pokemonName={pokemon.name} />
                 <p>No. {formatPokemonOrder(pokemon.id)}</p>
 
                 <h2
                   className={`${styles.textColor} ${pokemon.types[0].type.name}`}
                 >
-                  {capitalizeFirstLetter(pokemonName)}
+                  {capitalizeFirstLetter(pokemon.name)}
                 </h2>
               </div>
             </div>
@@ -83,7 +106,7 @@ function PokemonProfile() {
                   <div className="stat-name">
                     {capitalizeFirstLetter(stat.stat.name)}
                   </div>
-                  <div className="stat">{stat.base_stat}</div>
+                  <div className={styles.statNumber}>{stat.base_stat}</div>
                 </div>
               ))}
             </div>

@@ -1,6 +1,3 @@
-.button:hover {
-  background-color: #49b9a1;
-}
 .ball {
   height: 42px;
   position: absolute;
@@ -9,6 +6,10 @@
   cursor: pointer;
   animation: shake 1s linear infinite; /* Animation duration, iteration count, and timing function */
 }
+.ball:hover {
+  animation: none;
+}
+
 @keyframes shake {
   0%,
   100% {

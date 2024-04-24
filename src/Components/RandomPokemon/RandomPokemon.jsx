@@ -1,4 +1,5 @@
 import styles from "./RandomPokemon.module.css";
+import ball from "../../assets/images/ball_icon.svg";
 
 export default function RandomPokemon() {
   const APIurl = "https://pokeapi.co/api/v2/pokemon/";
@@ -15,9 +16,12 @@ export default function RandomPokemon() {
   };
   return (
     <div className={styles.container}>
-      <button className={styles.button} onClick={getRandomPokemon}>
-        Random
-      </button>
+      <img
+        src={ball}
+        alt=""
+        className={styles.ball}
+        onClick={getRandomPokemon}
+      ></img>
     </div>
   );
 }

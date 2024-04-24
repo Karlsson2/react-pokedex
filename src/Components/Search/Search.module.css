@@ -1,0 +1,62 @@
+input {
+  border: none;
+  background: light-dark(rgb(241, 243, 244), rgba(59, 59, 59, 0.9));
+  border-radius: 16px;
+  color: var(--font-color);
+  padding: 16px 32px 16px 48px;
+  flex: 1;
+  width: 100%;
+}
+form {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.magnifyingGlass {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.SearchContainer {
+  flex-basis: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 701px) and (max-width: 878px) {
+  .SearchContainer {
+    flex-basis: calc(45% + 2rem);
+  }
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 879px) and (max-width: 1199px) {
+  .SearchContainer {
+    flex-basis: calc(90% + 5rem);
+  }
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* Media query for screens larger than 1024px */
+@media screen and (min-width: 1200px) {
+  .SearchContainer {
+    flex-basis: calc(75% + 8rem);
+  }
+  .container {
+    padding: 2rem;
+  }
+}

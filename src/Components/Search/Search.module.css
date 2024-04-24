@@ -6,6 +6,7 @@ input {
   padding: 16px 32px 16px 48px;
   flex: 1;
   width: 100%;
+  font-size: 18px;
 }
 form {
   position: relative;
@@ -20,8 +21,8 @@ form {
 }
 .magnifyingGlass {
   position: absolute;
-  left: 16px;
-  top: 16px;
+  left: 18px;
+  top: 18px;
 }
 .SearchContainer {
   flex-basis: 100%;

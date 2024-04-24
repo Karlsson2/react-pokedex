@@ -10,7 +10,7 @@ const PokemonLikeButton = ({ pokemonName }) => {
     const storedLikedPokemon = localStorage.getItem("likedPokemon");
     return storedLikedPokemon ? JSON.parse(storedLikedPokemon) : [];
   });
-  const [profilePokemonName, setPokemonName] = useState(pokemonName); // Assuming you set pokemonName somewhere
+  const [profilePokemonName, setPokemonName] = useState(pokemonName);
 
   useEffect(() => {
     // Update local storage whenever liked state changes

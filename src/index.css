@@ -148,3 +148,147 @@
 .water-background {
   background: #73b5d9; /* Water Light */
 }
+.dragon-boxshadow:hover {
+  box-shadow: rgba(138, 128, 255, 0.5) 0px 1px 4px,
+    rgba(138, 128, 255, 0.5) 0px 0px 0px 3px; /* Dragon Light */
+}
+
+.bug-boxshadow:hover {
+  box-shadow: rgba(168, 192, 87, 0.5) 0px 1px 4px,
+    rgba(168, 192, 87, 0.5) 0px 0px 0px 3px; /* Bug Light */
+}
+
+.dark-boxshadow:hover {
+  box-shadow: rgba(122, 120, 128, 0.5) 0px 1px 4px,
+    rgba(122, 120, 128, 0.5) 0px 0px 0px 3px; /* Dark Light */
+}
+
+.electric-boxshadow:hover {
+  box-shadow: rgba(235, 209, 94, 0.5) 0px 1px 4px,
+    rgba(235, 209, 94, 0.5) 0px 0px 0px 3px; /* Electric Light */
+}
+
+.fairy-boxshadow:hover {
+  box-shadow: rgba(241, 152, 205, 0.5) 0px 1px 4px,
+    rgba(241, 152, 205, 0.5) 0px 0px 0px 3px; /* Fairy Light */
+}
+
+.fighting-boxshadow:hover {
+  box-shadow: rgba(236, 161, 94, 0.5) 0px 1px 4px,
+    rgba(236, 161, 94, 0.5) 0px 0px 0px 3px; /* Fire Light */
+}
+
+.flying-boxshadow:hover {
+  box-shadow: rgba(107, 136, 196, 0.5) 0px 1px 4px,
+    rgba(107, 136, 196, 0.5) 0px 0px 0px 3px; /* Flying Light */
+}
+
+.ghost-boxshadow:hover {
+  box-shadow: rgba(142, 121, 179, 0.5) 0px 1px 4px,
+    rgba(142, 121, 179, 0.5) 0px 0px 0px 3px; /* Ghost Light */
+}
+
+.grass-boxshadow:hover {
+  box-shadow: rgba(119, 189, 126, 0.5) 0px 1px 4px,
+    rgba(119, 189, 126, 0.5) 0px 0px 0px 3px; /* Grass Light */
+}
+
+.ground-boxshadow:hover {
+  box-shadow: rgba(201, 138, 84, 0.5) 0px 1px 4px,
+    rgba(201, 138, 84, 0.5) 0px 0px 0px 3px; /* Ground Light */
+}
+
+.ice-boxshadow:hover {
+  box-shadow: rgba(159, 216, 209, 0.5) 0px 1px 4px,
+    rgba(159, 216, 209, 0.5) 0px 0px 0px 3px; /* Ice Light */
+}
+
+.normal-boxshadow:hover {
+  box-shadow: rgba(160, 164, 150, 0.5) 0px 1px 4px,
+    rgba(160, 164, 150, 0.5) 0px 0px 0px 3px; /* Normal Light */
+}
+
+.poison-boxshadow:hover {
+  box-shadow: rgba(125, 85, 158, 0.5) 0px 1px 4px,
+    rgba(125, 85, 158, 0.5) 0px 0px 0px 3px; /* Poison Light */
+}
+
+.psychic-boxshadow:hover {
+  box-shadow: rgba(237, 161, 141, 0.5) 0px 1px 4px,
+    rgba(237, 161, 141, 0.5) 0px 0px 0px 3px; /* Psychic Light */
+}
+
+.rock-boxshadow:hover {
+  box-shadow: rgba(192, 182, 177, 0.5) 0px 1px 4px,
+    rgba(192, 182, 177, 0.5) 0px 0px 0px 3px; /* Rock Light */
+}
+
+.steel-boxshadow:hover {
+  box-shadow: rgba(185, 190, 203, 0.5) 0px 1px 4px,
+    rgba(185, 190, 203, 0.5) 0px 0px 0px 3px; /* Steel Light */
+}
+
+.water-boxshadow:hover {
+  box-shadow: rgba(115, 181, 217, 0.5) 0px 1px 4px,
+    rgba(115, 181, 217, 0.5) 0px 0px 0px 3px; /* Water Light */
+}
+
+.fire-boxshadow:hover {
+  box-shadow: rgba(236, 161, 94, 0.5) 0px 1px 4px,
+    rgba(236, 161, 94, 0.5) 0px 0px 0px 3px; /* Fire Light */
+}
+
+.flying-boxshadow:hover {
+  box-shadow: rgba(107, 136, 196, 0.5) 0px 1px 4px,
+    rgba(107, 136, 196, 0.5) 0px 0px 0px 3px; /* Flying Light */
+}
+
+.ghost-boxshadow:hover {
+  box-shadow: rgba(142, 121, 179, 0.5) 0px 1px 4px,
+    rgba(142, 121, 179, 0.5) 0px 0px 0px 3px; /* Ghost Light */
+}
+
+.grass-boxshadow:hover {
+  box-shadow: rgba(119, 189, 126, 0.5) 0px 1px 4px,
+    rgba(119, 189, 126, 0.5) 0px 0px 0px 3px rgba(119, 189, 126, 0.5); /* Grass Light */
+}
+
+.ground-boxshadow:hover {
+  box-shadow: rgba(201, 138, 84, 0.5) 0px 1px 4px,
+    rgba(201, 138, 84, 0.5) 0px 0px 0px 3px; /* Ground Light */
+}
+
+.ice-boxshadow:hover {
+  box-shadow: rgba(159, 216, 209, 0.5) 0px 1px 4px,
+    rgba(159, 216, 209, 0.5) 0px 0px 0px 3px; /* Ice Light */
+}
+
+.normal-boxshadow:hover {
+  box-shadow: rgba(160, 164, 150, 0.5) 0px 1px 4px,
+    rgba(160, 164, 150, 0.5) 0px 0px 0px 3px; /* Normal Light */
+}
+
+.poison-boxshadow:hover {
+  box-shadow: rgba(125, 85, 158, 0.5) 0px 1px 4px,
+    rgba(125, 85, 158, 0.5) 0px 0px 0px 3px; /* Poison Light */
+}
+
+.psychic-boxshadow:hover {
+  box-shadow: rgba(237, 161, 141, 0.5) 0px 1px 4px,
+    rgba(237, 161, 141, 0.5) 0px 0px 0px 3px; /* Psychic Light */
+}
+
+.rock-boxshadow:hover {
+  box-shadow: rgba(192, 182, 177, 0.5) 0px 1px 4px,
+    rgba(192, 182, 177, 0.5) 0px 0px 0px 3px; /* Rock Light */
+}
+
+.steel-boxshadow:hover {
+  box-shadow: rgba(185, 190, 203, 0.5) 0px 1px 4px,
+    rgba(185, 190, 203, 0.5) 0px 0px 0px 3px; /* Steel Light */
+}
+
+.water-boxshadow:hover {
+  box-shadow: rgba(115, 181, 217, 0.5) 0px 1px 4px,
+    rgba(115, 181, 217, 0.5) 0px 0px 0px 3px; /* Water Light */
+}

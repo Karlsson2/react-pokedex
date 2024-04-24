@@ -47,7 +47,11 @@ export default function List() {
     <div className={styles.container}>
       {pokeData &&
         pokeData.map((pokemon, index) => (
-          <InView className={styles.card} key={index}>
+          <InView
+            className={styles.card}
+            key={index}
+            pokemonType={pokemon.types[0].type.name}
+          >
             <Link to={`/${pokemon.name}`}>
               <div className={styles.textbox}>
                 <PokemonLikeButton pokemonName={pokemon.name} />

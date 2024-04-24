@@ -1,11 +1,9 @@
 import { useInView } from "react-intersection-observer";
 import styles from "./InView.module.css";
-import "./InView.module.css"; // CSS file for transitions
-
 const FadeInSection = ({ className, children }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once
-    threshold: 0.3, // Trigger when 50% of element is in view
+    triggerOnce: true,
+    threshold: 0.3, // Trigger when 30% of element is in view
   });
 
   return (

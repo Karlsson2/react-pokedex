@@ -1,8 +1,9 @@
 import styles from "./List.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import PokemonLikeButton from "../pokemonProfile/pokemonLikeButton";
 import SpinnerWheel from "../Spinner/Spinner";
+import InView from "../InView/InView.jsx";
 
 export default function List() {
   const [pokeData, setPokeData] = useState([]);
@@ -46,7 +47,7 @@ export default function List() {
     <div className={styles.container}>
       {pokeData &&
         pokeData.map((pokemon, index) => (
-          <div className={styles.card} key={index}>
+          <InView className={styles.card} key={index}>
             <Link to={`/${pokemon.name}`}>
               <div className={styles.textbox}>
                 <PokemonLikeButton pokemonName={pokemon.name} />
@@ -62,7 +63,7 @@ export default function List() {
                 src={pokemon.sprites.other["official-artwork"].front_default}
               />
             </Link>
-          </div>
+          </InView>
         ))}
     </div>
   );

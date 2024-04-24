@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import PokemonLikeButton from "./pokemonLikeButton";
 import { Navigate } from "react-router-dom";
 import SpinnerWheel from "../Spinner/Spinner";
-import pikachu from "../../assets/images/pikachu.gif";
+import ErrorContainer from "../error/error";
 
 function PokemonProfile() {
   const { pokemonName } = useParams();
@@ -32,14 +32,8 @@ function PokemonProfile() {
   }, [pokemonName]);
 
   if (error) {
-    return (
-      <div className={styles.errorContainer}>
-        <img src={pikachu} alt="pikachu-gif" />
-        <p>The pokemon {pokemonName} does not exist!</p>
-      </div>
-    );
+    return <ErrorContainer pokemonName={pokemonName} />;
   }
-
   if (pokemon === undefined) {
     return <SpinnerWheel />;
   }

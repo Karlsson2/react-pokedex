@@ -94,6 +94,13 @@ function PokemonProfile() {
                 ))}
               </div>
             </div>
+            <div className={styles.typesContainer}>
+              <h3>Abilities:</h3>
+              {pokemon.abilities &&
+                pokemon.abilities.map((item) => (
+                  <p>{capitalizeFirstLetter(item.ability.name)}</p>
+                ))}
+            </div>
             <div className={styles.statsContainer}>
               <h3>Stats:</h3>
               {pokemon.stats.map((stat, index) => (
